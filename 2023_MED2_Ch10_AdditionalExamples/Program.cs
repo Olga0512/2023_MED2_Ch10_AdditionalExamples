@@ -7,7 +7,7 @@ namespace _2023_MED2_Ch10_AdditionalExamples
         static void Main(string[] args)
         {
             {
-             //   int outsideVar = 20;
+                int outsideVar = 20;
                 SomeFunction(out outsideVar);
                 Console.WriteLine(outsideVar);
             }
