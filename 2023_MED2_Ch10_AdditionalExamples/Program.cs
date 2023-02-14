@@ -8,12 +8,12 @@ namespace _2023_MED2_Ch10_AdditionalExamples
         {
             {
                 int outsideVar = 20;
-                SomeFunction(outsideVar);
+                SomeFunction(ref outsideVar);
                 Console.WriteLine(outsideVar);
             }
         }
 
-        static void SomeFunction( int insideVar)
+        static void SomeFunction( ref int insideVar)
         {
             insideVar = insideVar + 10;
         }
