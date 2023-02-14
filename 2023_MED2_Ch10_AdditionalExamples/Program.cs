@@ -7,14 +7,15 @@ namespace _2023_MED2_Ch10_AdditionalExamples
         static void Main(string[] args)
         {
             {
-                int outsideVar = 20;
-                SomeFunction(ref outsideVar);
+             //   int outsideVar = 20;
+                SomeFunction(out outsideVar);
                 Console.WriteLine(outsideVar);
             }
         }
 
-        static void SomeFunction( ref int insideVar)
+        static void SomeFunction( out int insideVar)
         {
+            insideVar = 15;
             insideVar = insideVar + 10;
         }
     }
