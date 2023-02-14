@@ -21,16 +21,22 @@ namespace _2023_MED2_Ch10_AdditionalExamples
             hawk.Hunt();
             fish.Flee();
             fish.Hunt();
+            int n = fish.NumOfLegs();
+            Console.WriteLine(n);
 
             Console.ReadKey();
         }
         interface IPrey
         {
             void Flee();
+      
+   
+
         }
         interface IPredator
         {
             void Hunt();
+            int NumOfLegs();
         }
         class Rabbit : IPrey
         {
@@ -45,12 +51,26 @@ namespace _2023_MED2_Ch10_AdditionalExamples
             {
                 Console.WriteLine("The hawk is searching for food!");
             }
+            private int numOfLegs = 2;
+            public int NumOfLegs()
+            {
+                return numOfLegs;
+
+            }
+
         }
         class Fish : IPrey, IPredator
         {
             public void Flee()
             {
                 Console.WriteLine("The fish swims away!");
+            }
+
+            private int numOfLegs = 17;
+            public int NumOfLegs()
+            {
+                return numOfLegs;
+
             }
             public void Hunt()
             {
