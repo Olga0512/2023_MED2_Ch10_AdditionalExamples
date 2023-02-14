@@ -6,7 +6,16 @@ namespace _2023_MED2_Ch10_AdditionalExamples
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            {
+                int outsideVar = 20;
+                SomeFunction(outsideVar);
+                Console.WriteLine(outsideVar);
+            }
+        }
+
+        static void SomeFunction( int insideVar)
+        {
+            insideVar = insideVar + 10;
         }
     }
 }
